@@ -1,0 +1,49 @@
+TAREA.html
+<!doctype html¡>
+<html>
+ <head>
+  <title>Ingreso  de productos</title>
+  <style type="text/css">
+    .campos{
+     background: #fff;
+     color:#000;
+     border:1px solid; #6e6e6e;
+     height:30px;
+    }
+    .error{
+      background: orangered;
+      color: #000; 
+      border: 1px solid red;
+      height: 30px; 
+    }
+</style>   
+ </head> 
+ <script type="text/javascript">
+ function validar(valor){
+     if(valor.value==""){
+         valor.className="error";
+       }       
+         else{
+             valor.className="campos";
+         }
+     }
+ </script>
+    <body>
+    <center> 
+      <form>
+        <input type="text onblur="validar(this)" required class="campos" placeholder="Codigo..."></input>
+        <p></p>
+        <input type="text onblur="validar(this)" required class="campos" placeholder="Producto..."></input>
+        <p></p>
+        <input type="text onblur="validar(this)" required class="campos" placeholder="Descripcion..."></input>
+        <p></p>
+        <input type="text onblur="validar(this)" required class="campos" placeholder="Valor..."></input>
+        <p></p>
+        <input type="button"value="Guardar"
+        </form>
+    </center>
+    </body>
+</html>
+
+
+ 
